@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Circle -->
+    <circle cx="64" cy="64" r="60" fill="#635bff"/>
+    
+    <!-- Credit Card Base (Stripe-style) -->
+    <rect x="32" y="44" width="64" height="40" rx="4" fill="white"/>
+    
+    <!-- Autofill Lines Animation -->
+    <g opacity="0.9">
+        <!-- Card Number Line -->
+        <rect x="40" y="54" width="48" height="4" rx="2" fill="#c4c9ff"/>
+        <!-- Exp Date Line -->
+        <rect x="40" y="64" width="20" height="4" rx="2" fill="#c4c9ff"/>
+        <!-- CVC Line -->
+        <rect x="68" y="64" width="20" height="4" rx="2" fill="#c4c9ff"/>
+        <!-- Name Line -->
+        <rect x="40" y="74" width="48" height="4" rx="2" fill="#c4c9ff"/>
+    </g>
+    
+    <!-- Magic Wand / Autofill Icon -->
+    <g transform="translate(76, 76) scale(0.7)">
+        <circle cx="0" cy="0" r="16" fill="white"/>
+        <path d="M-8 -8L8 8M-8 8L8 -8" stroke="#635bff" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="4" fill="#635bff"/>
+    </g>
+</svg> 

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .title {
+            color: #1a1f36;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .title img {
+            width: 20px;
+            height: 20px;
+        }
+        .button {
+            background: #635bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            width: 100%;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .button:hover {
+            background: #5851ea;
+            transform: translateY(-1px);
+        }
+        .button:active {
+            transform: translateY(0);
+        }
+        .button:disabled {
+            background: #e0e0e0;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .status {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #697386;
+            min-height: 20px;
+        }
+        .shortcut {
+            margin-top: 12px;
+            padding: 8px;
+            background: #f7fafc;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #697386;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+        .shortcut kbd {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-family: monospace;
+            font-size: 11px;
+            color: #1a1f36;
+        }
+        .settings {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .settings-title {
+            font-size: 13px;
+            color: #1a1f36;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .checkbox-wrapper label {
+            font-size: 13px;
+            color: #4f566b;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <img src="icons/icon32.png" alt="Logo">
+            Stripe Test Autofill
+        </div>
+        <button id="autofillButton" class="button">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Auto-fill Test Data
+        </button>
+        <div class="shortcut">
+            Keyboard shortcut: <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>
+        </div>
+        <div id="status" class="status"></div>
+        <div class="settings">
+            <div class="settings-title">Settings</div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="autoPrompt" />
+                <label for="autoPrompt">Show prompt automatically on test pages</label>
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="rememberName" />
+                <label for="rememberName">Remember last used name</label>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 
