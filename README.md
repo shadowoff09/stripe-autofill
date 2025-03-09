@@ -1,4 +1,4 @@
-# Stripe Checkout Autofill Test Extension
+# Stripe Checkout Autofill Extension
 
 This browser extension auto-fills test credit card details on `https://checkout.stripe.com/` for testing purposes only.
 
@@ -10,7 +10,7 @@ This browser extension auto-fills test credit card details on `https://checkout.
 
 ## File Structure
 ```
-stripe-autofill-extension/
+stripe-autofill/
 ├── manifest.json
 ├── content.js
 ├── README.md
@@ -24,7 +24,7 @@ stripe-autofill-extension/
 
 1. Open Chrome and navigate to `chrome://extensions/`.
 2. Enable **Developer mode** in the top-right corner.
-3. Click **Load unpacked** and select the `stripe-autofill-extension` folder.
+3. Click **Load unpacked** and select the `stripe-autofill` folder.
 4. Navigate to `https://checkout.stripe.com/` to test the autofill functionality.
 
 ## Disclaimer
