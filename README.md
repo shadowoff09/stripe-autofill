@@ -49,3 +49,16 @@ This repository is configured with GitHub Actions to automatically:
 ## Disclaimer
 
 This extension is intended for testing environments only. Do not use in production.
+
+## Why This Extension Is Useful
+
+Developing and testing e-commerce applications with Stripe integration involves repeatedly entering test credit card information. This can become tedious and time-consuming, especially when:
+
+- Performing frequent testing iterations during development
+- Running continuous QA tests on checkout flows
+- Debugging payment-related issues
+- Demonstrating functionality to stakeholders
+
+This extension eliminates the repetitive task of manually entering test card details, saving developers and testers valuable time and reducing the potential for input errors. By automating this process, it allows teams to focus on what matters: building and improving their applications.
+
+For development teams working extensively with Stripe's payment platform, this simple utility can save hours of cumulative time and streamline the testing workflow.
