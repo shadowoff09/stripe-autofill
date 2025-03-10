@@ -1,5 +1,9 @@
 # Stripe Checkout Autofill Extension
 
+<div align="center">
+  <img src="banner.png" alt="stripe-autofill Banner" width="1280"/>
+</div>
+
 This browser extension auto-fills test credit card details on `https://checkout.stripe.com/` for testing purposes only.
 
 ## Test Details
