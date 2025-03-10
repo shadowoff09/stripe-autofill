@@ -6,11 +6,11 @@ This directory contains GitHub Actions workflow configurations that automate var
 
 ### `release.yml`
 
-This workflow automatically creates a new GitHub release with a ZIP file containing the extension files whenever changes are pushed to the main branch.
+This workflow automatically creates a new GitHub release with a ZIP file containing the extension files whenever changes are pushed to the master branch.
 
 #### How it works:
 
-1. Triggers on any push to the main branch
+1. Triggers on any push to the master branch
 2. Extracts the version number from the extension's manifest.json
 3. Creates a ZIP archive of the repository (excluding .git and .github directories)
 4. Creates a new GitHub release tagged with the version
@@ -18,9 +18,14 @@ This workflow automatically creates a new GitHub release with a ZIP file contain
 
 #### Usage:
 
-No manual action is required. The workflow runs automatically when code is pushed to the main branch.
+No manual action is required. The workflow runs automatically when code is pushed to the master branch.
 
 To update the version:
 1. Modify the `"version"` field in `manifest.json`
 2. Commit and push your changes
 3. A new release will be automatically created
+
+## Notes
+
+- The workflow uses the GitHub-provided `GITHUB_TOKEN` for authentication, so no additional setup is required
+- You can find the created releases in the "Releases" section of your GitHub repository

@@ -3,7 +3,7 @@ name: Create Release with ZIP
 on:
   push:
     branches:
-      - main  # or master, depending on your default branch
+      - master  # Updated to match your default branch name
 
 jobs:
   build:

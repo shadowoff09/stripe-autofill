@@ -42,9 +42,14 @@ stripe-autofill/
 ### Automatic Releases
 
 This repository is configured with GitHub Actions to automatically:
-1. Create a new release when changes are pushed to the main branch
+1. Create a new release when changes are pushed to the master branch
 2. Generate a ZIP file with all extension files 
 3. Attach the ZIP to the release for easy downloading
+
+The release version is taken from the `"version"` field in `manifest.json`. To update the version:
+1. Modify the version in `manifest.json`
+2. Commit and push your changes
+3. A new release will be automatically created
 
 ## Disclaimer
 
