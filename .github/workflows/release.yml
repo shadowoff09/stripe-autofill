@@ -1,0 +1,43 @@
+name: Create Release with ZIP
+
+on:
+  push:
+    branches:
+      - main  # or master, depending on your default branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Get version from manifest
+        id: get_version
+        run: |
+          VERSION=$(grep '"version"' manifest.json | cut -d '"' -f 4)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          
+      - name: Create ZIP file
+        run: zip -r stripe-autofill-v${{ steps.get_version.outputs.version }}.zip . -x ".git/*" ".github/*"
+        
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.get_version.outputs.version }}
+          release_name: Release v${{ steps.get_version.outputs.version }}
+          draft: false
+          prerelease: false
+          
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./stripe-autofill-v${{ steps.get_version.outputs.version }}.zip
+          asset_name: stripe-autofill-v${{ steps.get_version.outputs.version }}.zip
+          asset_content_type: application/zip 
